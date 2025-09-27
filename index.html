@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Career by Locha-e-Logic</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <nav class="nav">
+          <div class="logo">AI Career by Locha-e-Logic</div>
+          <div class="nav-links">
+            <div class="nav-link active" onclick="showSection('home')">
+              Home
+            </div>
+            <div class="nav-link" onclick="showSection('profile')">Profile</div>
+            <div class="nav-link" onclick="showSection('test')">Take Test</div>
+            <div class="nav-link" onclick="showSection('careers')">Careers</div>
+            <div class="nav-link" onclick="showSection('colleges')">
+              Colleges
+            </div>
+            <div class="nav-link" onclick="showSection('mentorship')">
+              Mentorship
+            </div>
+            <div class="nav-link" onclick="showSection('dashboard')">
+              Dashboard
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Home Section -->
+        <div id="home" class="section active">
+          <div class="hero">
+            <h1>Your AI-Powered Career Guide</h1>
+            <p>
+              Discover your perfect career path through advanced aptitude
+              testing, personalized recommendations, and ongoing mentorship
+              support.
+            </p>
+          </div>
+
+          <div class="features-grid">
+            <div class="feature-card" onclick="showSection('profile')">
+              <div class="feature-icon">👤</div>
+              <h3>Personal Profile</h3>
+              <p>
+                Create your comprehensive profile with academic performance,
+                interests, and preferences.
+              </p>
+            </div>
+
+            <div class="feature-card" onclick="showSection('test')">
+              <div class="feature-icon">🧠</div>
+              <h3>Aptitude Testing</h3>
+              <p>
+                Take adaptive tests for logical reasoning, verbal ability, and
+                personality assessment.
+              </p>
+            </div>
+
+            <div class="feature-card" onclick="showSection('careers')">
+              <div class="feature-icon">🎯</div>
+              <h3>Career Recommendations</h3>
+              <p>
+                Get AI-powered career suggestions based on your strengths and
+                interests.
+              </p>
+            </div>
+
+            <div class="feature-card" onclick="showSection('colleges')">
+              <div class="feature-icon">🏫</div>
+              <h3>College Matching</h3>
+              <p>
+                Find the best colleges and universities globally that match your
+                profile and budget.
+              </p>
+            </div>
+
+            <div class="feature-card" onclick="showSection('mentorship')">
+              <div class="feature-icon">🤝</div>
+              <h3>AI Mentorship</h3>
+              <p>
+                Get ongoing guidance and connect with real mentors for
+                personalized support.
+              </p>
+            </div>
+
+            <div class="feature-card" onclick="showSection('dashboard')">
+              <div class="feature-icon">📊</div>
+              <h3>Progress Dashboard</h3>
+              <p>
+                Track your journey with detailed reports, saved careers, and
+                application progress.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Section -->
+        <div id="profile" class="section">
+          <h2 style="text-align: center; margin-bottom: 30px">
+            Create Your Profile
+          </h2>
+
+          <div class="profile-form">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="Enter your full name" />
+            </div>
+
+            <div class="form-group">
+              <label for="age">Age</label>
+              <input type="number" id="age" placeholder="Enter your age" />
+            </div>
+
+            <div class="form-group">
+              <label for="location">Location</label>
+              <input
+                type="text"
+                id="location"
+                placeholder="City, State, Country"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="education">Current Education Level</label>
+              <select id="education">
+                <option value="">Select your level</option>
+                <option value="10th">10th Standard</option>
+                <option value="12th">12th Standard</option>
+                <option value="undergraduate">Undergraduate</option>
+                <option value="graduate">Graduate</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="subjects">Favorite Subjects</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input type="checkbox" id="math" value="Mathematics" />
+                  <label for="math">Mathematics</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="science" value="Science" />
+                  <label for="science">Science</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="english" value="English" />
+                  <label for="english">English</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="history" value="History" />
+                  <label for="history">History</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="arts" value="Arts" />
+                  <label for="arts">Arts</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    id="computer"
+                    value="Computer Science"
+                  />
+                  <label for="computer">Computer Science</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="interests">Hobbies & Interests</label>
+              <textarea
+                id="interests"
+                rows="3"
+                placeholder="Tell us about your hobbies, interests, and activities you enjoy..."
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="countries">Preferred Study Countries</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input type="checkbox" id="india" value="India" />
+                  <label for="india">India</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="usa" value="USA" />
+                  <label for="usa">USA</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="uk" value="UK" />
+                  <label for="uk">UK</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="canada" value="Canada" />
+                  <label for="canada">Canada</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="australia" value="Australia" />
+                  <label for="australia">Australia</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="germany" value="Germany" />
+                  <label for="germany">Germany</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="budget">Annual Budget (USD)</label>
+              <select id="budget">
+                <option value="">Select budget range</option>
+                <option value="0-10000">$0 - $10,000</option>
+                <option value="10000-25000">$10,000 - $25,000</option>
+                <option value="25000-50000">$25,000 - $50,000</option>
+                <option value="50000-100000">$50,000 - $100,000</option>
+                <option value="100000+">$100,000+</option>
+              </select>
+            </div>
+
+            <button
+              class="btn"
+              onclick="saveProfile()"
+              style="width: 100%; margin-top: 20px"
+            >
+              Save Profile & Continue
+            </button>
+          </div>
+        </div>
+
+        <!-- Test Section -->
+        <div id="test" class="section">
+          <div class="test-container">
+            <div id="test-intro">
+              <h2 style="text-align: center; margin-bottom: 30px">
+                Aptitude & Personality Assessment
+              </h2>
+              <p style="text-align: center; margin-bottom: 30px">
+                This comprehensive test will assess your logical reasoning,
+                verbal abilities, numerical skills, and personality traits to
+                provide personalized career recommendations.
+              </p>
+
+              <div style="text-align: center">
+                <button class="btn" onclick="startTest()">
+                  Start Assessment
+                </button>
+              </div>
+            </div>
+
+            <div id="test-interface" class="hidden">
+              <div class="question-card">
+                <div class="question-header">
+                  <span id="question-counter">Question 1 of 20</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                  </div>
+                  <span id="test-type">Logical Reasoning</span>
+                </div>
+
+                <div id="question-content">
+                  <h3 id="question-text">
+                    Which number comes next in the sequence: 2, 4, 8, 16, ?
+                  </h3>
+                  <div class="options">
+                    <div class="option" onclick="selectOption(this, 'A')">
+                      A) 24
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'B')">
+                      B) 32
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'C')">
+                      C) 20
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'D')">
+                      D) 28
+                    </div>
+                  </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px">
+                  <button
+                    class="btn-secondary"
+                    onclick="previousQuestion()"
+                    id="prev-btn"
+                    disabled
+                  >
+                    Previous
+                  </button>
+                  <button
+                    class="btn"
+                    onclick="nextQuestion()"
+                    id="next-btn"
+                    style="margin-left: 20px"
+                  >
+                    Next
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div id="test-results" class="hidden">
+              <h2 style="text-align: center; margin-bottom: 30px">
+                Your Test Results
+              </h2>
+
+              <div class="results-grid">
+                <div class="result-card">
+                  <h3>Logical Reasoning</h3>
+                  <div class="score-display">
+                    <div class="score-circle">
+                      <div class="score-inner">85%</div>
+                    </div>
+                  </div>
+                  <p>
+                    Excellent problem-solving abilities with strong analytical
+                    thinking skills.
+                  </p>
+                </div>
+
+                <div class="result-card">
+                  <h3>Verbal Ability</h3>
+                  <div class="score-display">
+                    <div class="score-circle">
+                      <div class="score-inner">78%</div>
+                    </div>
+                  </div>
+                  <p>
+                    Good communication skills with room for improvement in
+                    vocabulary.
+                  </p>
+                </div>
+
+                <div class="result-card">
+                  <h3>Numerical Ability</h3>
+                  <div class="score-display">
+                    <div class="score-circle">
+                      <div class="score-inner">92%</div>
+                    </div>
+                  </div>
+                  <p>
+                    Outstanding mathematical skills and quantitative reasoning
+                    abilities.
+                  </p>
+                </div>
+
+                <div class="result-card">
+                  <h3>Personality Type</h3>
+                  <div class="score-display">
+                    <h2 style="color: #667eea">INTJ</h2>
+                    <p><strong>The Architect</strong></p>
+                  </div>
+                  <p>
+                    Strategic thinker with a natural drive for implementing
+                    ideas and achieving goals.
+                  </p>
+                </div>
+              </div>
+
+              <div style="text-align: center; margin-top: 30px">
+                <button class="btn" onclick="showSection('careers')">
+                  View Career Recommendations
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Careers Section -->
+        <div id="careers" class="section">
+          <h2 style="text-align: center; margin-bottom: 30px">
+            Recommended Career Paths
+          </h2>
+          <p style="text-align: center; margin-bottom: 40px">
+            Based on your test results and profile, here are the top career
+            recommendations tailored for you.
+          </p>
+
+          <div class="results-grid">
+            <div class="career-card">
+              <h3>🖥️ Software Engineering</h3>
+              <div style="margin: 20px 0">
+                <strong>Match Score: 95%</strong>
+                <div class="progress-bar" style="margin-top: 5px">
+                  <div class="progress-fill" style="width: 95%"></div>
+                </div>
+              </div>
+              <p>
+                <strong>Why it fits:</strong> Your excellent logical reasoning
+                and numerical abilities make you perfect for programming and
+                system design.
+              </p>
+              <p>
+                <strong>Average Salary:</strong> $75,000 - $150,000 annually
+              </p>
+              <p>
+                <strong>Growth Prospects:</strong> Very High - 22% job growth
+                expected
+              </p>
+              <button class="btn" style="margin-top: 15px; width: 100%">
+                Explore Details
+              </button>
+            </div>
+
+            <div class="career-card">
+              <h3>📊 Data Scientist</h3>
+              <div style="margin: 20px 0">
+                <strong>Match Score: 88%</strong>
+                <div class="progress-bar" style="margin-top: 5px">
+                  <div class="progress-fill" style="width: 88%"></div>
+                </div>
+              </div>
+              <p>
+                <strong>Why it fits:</strong> Strong analytical skills and
+                mathematical abilities align perfectly with data analysis and
+                machine learning.
+              </p>
+              <p>
+                <strong>Average Salary:</strong> $85,000 - $165,000 annually
+              </p>
+              <p>
+                <strong>Growth Prospects:</strong> Excellent - 36% job growth
+                expected
+              </p>
+              <button class="btn" style="margin-top: 15px; width: 100%">
+                Explore Details
+              </button>
+            </div>
+
+            <div class="career-card">
+              <h3>🏗️ Systems Architect</h3>
+              <div style="margin: 20px 0">
+                <strong>Match Score: 82%</strong>
+                <div class="progress-bar" style="margin-top: 5px">
+                  <div class="progress-fill" style="width: 82%"></div>
+                </div>
+              </div>
+              <p>
+                <strong>Why it fits:</strong> Your INTJ personality and
+                strategic thinking make you ideal for designing complex systems.
+              </p>
+              <p>
+                <strong>Average Salary:</strong> $90,000 - $170,000 annually
+              </p>
+              <p>
+                <strong>Growth Prospects:</strong> High - 15% job growth
+                expected
+              </p>
+              <button class="btn" style="margin-top: 15px; width: 100%">
+                Explore Details
+              </button>
+            </div>
+
+            <div class="career-card">
+              <h3>🔬 Research Scientist</h3>
+              <div style="margin: 20px 0">
+                <strong>Match Score: 79%</strong>
+                <div class="progress-bar" style="margin-top: 5px">
+                  <div class="progress-fill" style="width: 79%"></div>
+                </div>
+              </div>
+              <p>
+                <strong>Why it fits:</strong> Your analytical mindset and
+                problem-solving skills are perfect for scientific research.
+              </p>
+              <p>
+                <strong>Average Salary:</strong> $60,000 - $120,000 annually
+              </p>
+              <p>
+                <strong>Growth Prospects:</strong> Moderate - 8% job growth
+                expected
+              </p>
+              <button class="btn" style="margin-top: 15px; width: 100%">
+                Explore Details
+              </button>
+            </div>
+
+            <div class="career-card">
+              <h3>💼 Management Consultant</h3>
+              <div style="margin: 20px 0">
+                <strong>Match Score: 75%</strong>
+                <div class="progress-bar" style="margin-top: 5px">
+                  <div class="progress-fill" style="width: 75%"></div>
+                </div>
+              </div>
+              <p>
+                <strong>Why it fits:</strong> Strategic thinking and
+                problem-solving abilities suit consulting roles well.
+              </p>
+              <p>
+                <strong>Average Salary:</strong> $80,000 - $160,000 annually
+              </p>
+              <p>
+                <strong>Growth Prospects:</strong> High - 18% job growth
+                expected
+              </p>
+              <button class="btn" style="margin-top: 15px; width: 100%">
+                Explore Details
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Colleges Section -->
+        <div id="colleges" class="section">
+          <h2 style="text-align: center; margin-bottom: 30px">
+            Recommended Colleges & Universities
+          </h2>
+          <p style="text-align: center; margin-bottom: 40px">
+            Top institutions for your selected career paths, matching your
+            budget and location preferences.
+          </p>
+
+          <div style="text-align: center; margin-bottom: 30px">
+            <button class="btn" onclick="filterColleges('all')" id="filter-all">
+              All Colleges
+            </button>
+            <button
+              class="btn-secondary"
+              onclick="filterColleges('local')"
+              id="filter-local"
+              style="margin-left: 10px"
+            >
+              Local
+            </button>
+            <button
+              class="btn-secondary"
+              onclick="filterColleges('international')"
+              id="filter-international"
+              style="margin-left: 10px"
+            >
+              International
+            </button>
+          </div>
+
+          <div class="results-grid">
+            <div class="college-card local">
+              <h3>🏛️ Indian Institute of Technology (IIT) Delhi</h3>
+              <p><strong>Location:</strong> New Delhi, India</p>
+              <p>
+                <strong>Programs:</strong> Computer Science, Data Science,
+                Engineering
+              </p>
+              <p><strong>Ranking:</strong> #1 in India for Engineering</p>
+              <p><strong>Annual Fees:</strong> $2,000 - $3,000</p>
+              <p>
+                <strong>Requirements:</strong> JEE Advanced Score: 95+
+                percentile
+              </p>
+              <div
+                style="
+                  background: rgba(102, 126, 234, 0.1);
+                  padding: 10px;
+                  border-radius: 8px;
+                  margin-top: 15px;
+                "
+              >
+                <strong>Match Score: 98%</strong> - Perfect fit for your
+                profile!
+              </div>
+              <button class="btn" style="margin-top: 15px; width: 100%">
+                Apply Now
+              </button>
+            </div>
+
+            <div class="college-card local">
+              <h3>🏫 Indian Institute of Science (IISc) Bangalore</h3>
+              <p><strong>Location:</strong> Bangalore, India</p>
+              <p>
+                <strong>Programs:</strong> Research Programs, Computer Science,
+                Data Science
+              </p>
+              <p><strong>Ranking:</strong> #1 in India Overall</p>
+              <p><strong>Annual Fees:</strong> $1,500 - $2,500</p>
+              <p>
+                <strong>Requirements:</strong> KVPY/JEE/GATE qualifying scores
+              </p>
+              <div
+                style="
+                  background: rgba(102, 126, 234, 0.1);
+                  padding: 10px;
+                  border-radius: 8px;
+                  margin-top: 15px;
+                "
+              >
+                <strong>Match Score: 94%</strong> - Excellent for research
+                careers!
+              </div>
+              <button class="btn" style="margin-top: 15px; width: 100%">
+                Apply Now
+              </button>
+            </div>
+
+            <div class="college-card international">
+              <h3>🎓 Massachusetts Institute of Technology (MIT)</h3>
+              <p><strong>Location:</strong> Cambridge, USA</p>
+              <p>
+                <strong>Programs:</strong> Computer Science, AI, Data Science
+              </p>
+              <p><strong>Ranking:</strong> #1 Global for Technology</p>
+              <p><strong>Annual Fees:</strong> $55,000 - $75,000</p>
+              <p><strong>Requirements:</strong> SAT: 1500+, Strong Portfolio</p>
+              <div
+                style="
+                  background: rgba(102, 126, 234, 0.1);
+                  padding: 10px;
+                  border-radius: 8px;
+                  margin-top: 15px;
+                "
+              >
+                <strong>Match Score: 96%</strong> - Dream destination for tech
+                careers!
+              </div>
+              <button class="btn" style="margin-top: 15px; width: 100%">
+                Learn More
+              </button>
+            </div>
+
+            <div class="college-card international">
+              <h3>🏛️ Stanford University</h3>
+              <p><strong>Location:</strong> California, USA</p>
+              <p>
+                <strong>Programs:</strong> Computer Science, Engineering,
+                Business
+              </p>
+              <p><strong>Ranking:</strong> #2 Global Overall</p>
+              <p><strong>Annual Fees:</strong> $60,000 - $80,000</p>
+              <p>
+                <strong>Requirements:</strong> SAT: 1480+, Leadership Experience
+              </p>
+              <div
+                style="
+                  background: rgba(102, 126, 234, 0.1);
+                  padding: 10px;
+                  border-radius: 8px;
+                  margin-top: 15px;
+                "
+              >
+                <strong>Match Score: 92%</strong> - Great for entrepreneurial
+                minds!
+              </div>
+              <button class="btn" style="margin-top: 15px; width: 100%">
+                Learn More
+              </button>
+            </div>
+
+            <div class="college-card international">
+              <h3>🎯 University of Toronto</h3>
+              <p><strong>Location:</strong> Toronto, Canada</p>
+              <p>
+                <strong>Programs:</strong> Computer Science, Data Science, AI
+              </p>
+              <p><strong>Ranking:</strong> #1 in Canada for Computer Science</p>
+              <p><strong>Annual Fees:</strong> $35,000 - $45,000</p>
+              <p>
+                <strong>Requirements:</strong> Strong Academic Record, English
+                Proficiency
+              </p>
+              <div
+                style="
+                  background: rgba(102, 126, 234, 0.1);
+                  padding: 10px;
+                  border-radius: 8px;
+                  margin-top: 15px;
+                "
+              >
+                <strong>Match Score: 89%</strong> - Affordable international
+                option!
+              </div>
+              <button class="btn" style="margin-top: 15px; width: 100%">
+                Learn More
+              </button>
+            </div>
+
+            <div class="college-card international">
+              <h3>🏫 Technical University of Munich</h3>
+              <p><strong>Location:</strong> Munich, Germany</p>
+              <p>
+                <strong>Programs:</strong> Computer Science, Engineering,
+                Research
+              </p>
+              <p><strong>Ranking:</strong> #1 in Germany for Technology</p>
+              <p><strong>Annual Fees:</strong> $500 - $2,000 (Low cost!)</p>
+              <p>
+                <strong>Requirements:</strong> Strong Academic Record, German
+                Language (Optional)
+              </p>
+              <div
+                style="
+                  background: rgba(102, 126, 234, 0.1);
+                  padding: 10px;
+                  border-radius: 8px;
+                  margin-top: 15px;
+                "
+              >
+                <strong>Match Score: 87%</strong> - Best value for money!
+              </div>
+              <button class="btn" style="margin-top: 15px; width: 100%">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mentorship Section -->
+        <div id="mentorship" class="section">
+          <h2 style="text-align: center; margin-bottom: 30px">
+            AI Mentorship & Guidance
+          </h2>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 1fr 300px;
+              gap: 30px;
+              margin-bottom: 30px;
+            "
+          >
+            <div class="chat-container">
+              <div class="chat-messages" id="chat-messages">
+                <div class="message bot">
+                  <strong>AI Career Mentor:</strong> Hello! I'm your AI career
+                  mentor. I'm here to help you with any questions about your
+                  career path, college applications, study plans, or any other
+                  guidance you need. How can I assist you today?
+                </div>
+              </div>
+              <div class="chat-input">
+                <input
+                  type="text"
+                  id="chat-input"
+                  placeholder="Ask me anything about your career..."
+                  onkeypress="handleChatEnter(event)"
+                />
+                <button class="btn" onclick="sendMessage()">Send</button>
+              </div>
+            </div>
+
+            <div>
+              <div class="result-card">
+                <h3>💡 Quick Actions</h3>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    margin-top: 15px;
+                  "
+                >
+                  <button
+                    class="btn-secondary"
+                    onclick="askPredefinedQuestion('career-change')"
+                  >
+                    Career Change Advice
+                  </button>
+                  <button
+                    class="btn-secondary"
+                    onclick="askPredefinedQuestion('study-plan')"
+                  >
+                    Create Study Plan
+                  </button>
+                  <button
+                    class="btn-secondary"
+                    onclick="askPredefinedQuestion('college-prep')"
+                  >
+                    College Prep Tips
+                  </button>
+                  <button
+                    class="btn-secondary"
+                    onclick="askPredefinedQuestion('interview-prep')"
+                  >
+                    Interview Preparation
+                  </button>
+                  <button
+                    class="btn-secondary"
+                    onclick="askPredefinedQuestion('skill-gap')"
+                  >
+                    Skill Gap Analysis
+                  </button>
+                </div>
+              </div>
+
+              <div class="result-card" style="margin-top: 20px">
+                <h3>👥 Connect with Real Mentors</h3>
+                <p>Get personalized guidance from industry professionals:</p>
+                <div style="margin-top: 15px">
+                  <button class="btn" style="width: 100%; margin-bottom: 10px">
+                    📞 Schedule Video Call
+                  </button>
+                  <button class="btn-secondary" style="width: 100%">
+                    💬 Text Mentorship
+                  </button>
+                </div>
+              </div>
+
+              <div class="result-card" style="margin-top: 20px">
+                <h3>📚 Resources</h3>
+                <div style="margin-top: 15px">
+                  <p>🎥 Career Videos: 50+</p>
+                  <p>📖 Study Guides: 30+</p>
+                  <p>🎯 Practice Tests: 15+</p>
+                  <button
+                    class="btn-secondary"
+                    style="width: 100%; margin-top: 10px"
+                  >
+                    Browse Library
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dashboard Section -->
+        <div id="dashboard" class="section">
+          <h2 style="text-align: center; margin-bottom: 30px">
+            Your Progress Dashboard
+          </h2>
+
+          <div class="dashboard-stats">
+            <div class="stat-card">
+              <div class="stat-number">3</div>
+              <div>Tests Completed</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">5</div>
+              <div>Career Matches</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">12</div>
+              <div>Colleges Saved</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">2</div>
+              <div>Applications Started</div>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 30px">
+            <div>
+              <div class="result-card">
+                <h3>📊 Your Skills Profile</h3>
+                <canvas id="skillsChart" width="400" height="200"></canvas>
+              </div>
+
+              <div class="result-card" style="margin-top: 20px">
+                <h3>🎯 Saved Careers</h3>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    margin-top: 15px;
+                  "
+                >
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      padding: 10px;
+                      background: rgba(102, 126, 234, 0.1);
+                      border-radius: 8px;
+                    "
+                  >
+                    <span>Software Engineering</span>
+                    <button class="btn-secondary" style="padding: 5px 15px">
+                      View
+                    </button>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      padding: 10px;
+                      background: rgba(102, 126, 234, 0.1);
+                      border-radius: 8px;
+                    "
+                  >
+                    <span>Data Scientist</span>
+                    <button class="btn-secondary" style="padding: 5px 15px">
+                      View
+                    </button>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      padding: 10px;
+                      background: rgba(102, 126, 234, 0.1);
+                      border-radius: 8px;
+                    "
+                  >
+                    <span>Systems Architect</span>
+                    <button class="btn-secondary" style="padding: 5px 15px">
+                      View
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="result-card" style="margin-top: 20px">
+                <h3>📅 Upcoming Deadlines</h3>
+                <div style="margin-top: 15px">
+                  <div
+                    style="
+                      padding: 15px;
+                      border-left: 4px solid #667eea;
+                      background: rgba(102, 126, 234, 0.05);
+                      margin-bottom: 10px;
+                    "
+                  >
+                    <strong>MIT Application Deadline</strong><br />
+                    <span style="color: #666"
+                      >January 1, 2025 - 45 days left</span
+                    >
+                  </div>
+                  <div
+                    style="
+                      padding: 15px;
+                      border-left: 4px solid #764ba2;
+                      background: rgba(118, 75, 162, 0.05);
+                      margin-bottom: 10px;
+                    "
+                  >
+                    <strong>Stanford Early Decision</strong><br />
+                    <span style="color: #666"
+                      >November 1, 2024 - 15 days left</span
+                    >
+                  </div>
+                  <div
+                    style="
+                      padding: 15px;
+                      border-left: 4px solid #28a745;
+                      background: rgba(40, 167, 69, 0.05);
+                    "
+                  >
+                    <strong>SAT Registration</strong><br />
+                    <span style="color: #666"
+                      >December 15, 2024 - 60 days left</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="result-card">
+                <h3>🏆 Achievements</h3>
+                <div style="margin-top: 15px">
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 10px;
+                      margin-bottom: 15px;
+                    "
+                  >
+                    <span style="font-size: 2rem">🎯</span>
+                    <div>
+                      <strong>Profile Complete</strong><br />
+                      <small>Completed your profile setup</small>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 10px;
+                      margin-bottom: 15px;
+                    "
+                  >
+                    <span style="font-size: 2rem">🧠</span>
+                    <div>
+                      <strong>First Test Taker</strong><br />
+                      <small>Completed aptitude assessment</small>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 10px;
+                      margin-bottom: 15px;
+                    "
+                  >
+                    <span style="font-size: 2rem">📚</span>
+                    <div>
+                      <strong>Research Explorer</strong><br />
+                      <small>Explored 10+ colleges</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="result-card" style="margin-top: 20px">
+                <h3>💡 Tips & Recommendations</h3>
+                <div style="margin-top: 15px">
+                  <div
+                    style="
+                      background: rgba(102, 126, 234, 0.1);
+                      padding: 15px;
+                      border-radius: 8px;
+                      margin-bottom: 10px;
+                    "
+                  >
+                    <strong>📈 Improve Your Profile</strong><br />
+                    <small
+                      >Add more extracurricular activities to strengthen your
+                      college applications.</small
+                    >
+                  </div>
+                  <div
+                    style="
+                      background: rgba(118, 75, 162, 0.1);
+                      padding: 15px;
+                      border-radius: 8px;
+                      margin-bottom: 10px;
+                    "
+                  >
+                    <strong>🎯 Skill Building</strong><br />
+                    <small
+                      >Consider taking online courses in Data Science to enhance
+                      your profile.</small
+                    >
+                  </div>
+                  <div
+                    style="
+                      background: rgba(40, 167, 69, 0.1);
+                      padding: 15px;
+                      border-radius: 8px;
+                    "
+                  >
+                    <strong>🌟 Next Steps</strong><br />
+                    <small
+                      >Schedule a mentorship call to discuss your career
+                      roadmap.</small
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </body>
+</html>
